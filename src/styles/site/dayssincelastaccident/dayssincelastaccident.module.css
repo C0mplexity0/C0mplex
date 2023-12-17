@@ -1,0 +1,109 @@
+.dsla {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    --dsla-size: 500px;
+    --dsla-font-size: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .dsla {
+        --dsla-size: 400px;
+        --dsla-font-size: 150px;
+    }
+}
+
+.dsla > span {
+    display: inline;
+    width: fit-content;
+    height: 20px;
+    white-space: nowrap;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-color-tertiary);
+    padding: 5px;
+    font-size: 12px;
+}
+
+.dsla-frame-container {
+    width: var(--dsla-size);
+    height: var(--dsla-size);
+}
+
+.dsla-frame {
+    --border-size: 5px;
+    --dash-size: 20px;
+    --color1: black;
+    --color2: yellow;
+
+    position: absolute;
+
+    width: var(--dsla-size);
+    height: var(--dsla-size);
+    background-color: #3b3b3b;
+
+    border: none;
+
+    border-radius: 20px;
+
+    border-image: repeating-linear-gradient(to right, var(--color1) 0, var(--color1) var(--dash-size), var(--color2) var(--dash-size), var(--color2) calc(var(--dash-size) * 2), var(--color2) calc(var(--dash-size) * 3), var(--color1) calc(var(--dash-size) * 3), var(--color1) calc(var(--dash-size) * 4));
+    border-image-slice: 16;
+    border-image-width: var(--border-size) 0;
+}
+
+.dsla-frame::after {
+    width: var(--dsla-size);
+    height: var(--dsla-size);
+
+    content: "";
+    top: 0;
+    position: absolute;
+
+    border-image: repeating-linear-gradient(to bottom, var(--color2) 0, var(--color2) var(--dash-size), var(--color1) var(--dash-size), var(--color1) calc(var(--dash-size) * 2), var(--color1) calc(var(--dash-size) * 3), var(--color2) calc(var(--dash-size) * 3), var(--color2) calc(var(--dash-size) * 4));
+    border-image-slice: 16;
+    border-image-width: 0 var(--border-size);
+}
+
+.dsla-content {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin-top: 5px;
+    margin-left: 5px;
+
+    text-align: center;
+
+    position: relative;
+
+    color: white;
+}
+
+.dsla-counter {
+    font-size: var(--dsla-font-size);
+    margin: 0px;
+    padding: 0px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.time-button {
+    box-shadow: 0px 0px 5px var(--default-box-shadow-color);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: var(--background-special-primary) !important;
+    color: var(--text-color-special) !important;
+}
+
+.time-button::-webkit-calendar-picker-indicator {
+    filter: var(--special-svg-filter) !important;
+}
+
+.time-button:hover {
+    background-color: var(--background-special-highlight) !important;
+}

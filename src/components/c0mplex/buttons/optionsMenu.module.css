@@ -1,0 +1,51 @@
+.options-menu-content {
+    left: unset !important;
+    transform: none !important;
+    right: 8px;
+    padding-bottom: 5px !important;
+}
+
+.options-menu-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.options-menu-li {
+    display: flex;
+    width: fit-content;
+}
+
+.options-menu-li {
+    margin-bottom: 5px;
+}
+
+.options-menu-li-button {
+    width: fit-content;
+    height: 45px;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.options-menu-li-button-a {
+    width: fit-content;
+    white-space: nowrap;
+    line-break: none;
+    height: 25px;
+}
+
+.options-menu-li-icon {
+    height: 25px;
+}
+
+.options-menu-li-text {
+    margin-left: 7px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    flex: 1;
+    text-align: left;
+    white-space: nowrap;
+    line-break: none;
+}

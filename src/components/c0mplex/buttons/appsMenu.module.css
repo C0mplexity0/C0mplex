@@ -1,0 +1,66 @@
+.apps-menu-content {
+    left: unset !important;
+    transform: none !important;
+    right: -42px;
+}
+
+.apps-list {
+    width: 280px;
+    height: 260px;
+
+    overflow-y: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    border-radius: 15px;
+}
+
+.apps-list::-webkit-scrollbar-track {
+    background-color: var(--background-secondary);
+}
+ 
+.apps-list::-webkit-scrollbar-thumb {
+    background-color: var(--background-tertiary);
+}
+
+.apps-list::-webkit-scrollbar-thumb:hover {
+    background-color: var(--background-highlight);
+}
+
+.app {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: var(--background-tertiary);
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    border-radius: 10px;
+
+    margin: 0px;
+
+    text-decoration: none;
+}
+
+.app:hover {
+    background-color: var(--background-highlight);
+}
+
+.app img {
+    border-radius: var(--circle-border-radius);
+}
+
+.app span {
+    font-size: 12px;
+    color: var(--text-color-primary);
+    text-align: center;
+}

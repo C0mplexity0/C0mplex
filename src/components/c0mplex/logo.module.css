@@ -1,0 +1,8 @@
+.logo-image {
+    height: 45px;
+    pointer-events: none;
+}
+
+.logo-image-monochrome-adjusting {
+    filter: var(--default-svg-filter);
+}

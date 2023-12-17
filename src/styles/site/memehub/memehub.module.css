@@ -1,0 +1,17 @@
+.submit-link {
+    background-color: var(--background-special-primary);
+    border-radius: var(--circle-border-radius);
+    text-decoration: none;
+    color: var(--text-color-special);
+
+    width: 40px;
+    height: 40px;
+
+    text-align: center;
+    line-height: 40px !important;
+    vertical-align: middle !important;
+}
+
+.submit-link:hover {
+    background-color: var(--background-special-highlight);
+}

@@ -1,0 +1,259 @@
+.player-section {
+    --report-button-background-color: rgb(205, 5, 5);
+    --report-button-border-color: rgb(116, 3, 3);
+
+    --report-button-hover-background-color: rgb(116, 3, 3);
+    --report-button-hover-border-color: rgb(116, 3, 3);
+
+    --report-button-color: white;
+
+    width: 100%;
+    height: calc(100% - 51px);
+    min-height: calc(100% - 51px);
+
+    position: absolute;
+
+    display: flex;
+}
+
+.player-container {
+    overflow: hidden;
+    padding: 0px;
+
+    flex: 1;
+
+    margin: 0px;
+
+    border-right: solid 1px var(--border-color-primary);
+}
+
+.player {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    padding: 0px;
+}
+
+.player-footer {
+    width: 20%;
+    min-width: 250px;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.player-controls {
+    height: 50px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.player-controls-center-div,
+.player-details-center-div {
+    flex: 1;
+}
+
+.player-random-button {
+    padding: 0px;
+
+    width: 48px;
+    height: 48px;
+
+    font-size: 20px;
+}
+
+.player-random-button-loading {
+    cursor: default;
+
+    padding: 12px;
+
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+
+    font-size: 20px;
+
+    text-align: center;
+
+    animation-name: spin;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    background-color: var(--background-secondary);
+
+    border-radius: var(--circle-border-radius);
+
+    display: none;
+}
+
+@keyframes spin {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+.player-last-button,
+.player-next-button {
+    margin-left: 4px;
+    margin-right: 4px;
+
+    padding: 0px;
+
+    width: 48px;
+    height: 48px;
+
+    font-size: 20px;
+}
+
+.player-last-button {
+    margin-left: 8px;
+}
+
+.player-next-button {
+    margin-right: 8px;
+}
+
+.player-last-button[disabled],
+.player-next-button[disabled] {
+    visibility: hidden;
+}
+
+.player-details {
+    width: calc(100% - 8px);
+    height: 36px;
+
+    padding: 4px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.player-details-title {
+    margin: 0px;
+    padding: 5px 10px;
+    font-size: 25px;
+    line-height: 36px;
+    height: 36px;
+    vertical-align: middle;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.report-button {
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    font-size: 16px;
+
+    background-color: var(--report-button-background-color);
+    border-color: var(--report-button-border-color);
+
+    color: var(--report-button-color);
+}
+
+.report-button:hover {
+    background-color: var(--report-button-hover-background-color);
+    border-color: var(--report-button-hover-border-color);
+}
+
+.player-mobile-hide {
+    flex: 1;
+    overflow: hidden;
+    display: block;
+}
+
+.player-uploader {
+    display: flex;
+    width: calc(100% - 28px);
+    max-width: calc(100% - 28px);
+    gap: 5px;
+    border: solid 1px var(--border-color-primary);
+    margin-left: 9px;
+    margin-right: 9px;
+    padding: 4px;
+
+    border-radius: var(--circle-border-radius);
+
+    text-decoration: none;
+    color: var(--text-color-primary);
+}
+
+.player-uploader-img {
+    padding: 3px;
+    padding-left: 8px;
+    filter: var(--default-svg-filter);
+}
+
+.player-uploader-span {
+    height: 36px;
+    line-height: 36px;
+    vertical-align: middle;
+    font-size: 14px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    max-width: calc(100% - 47px);
+}
+
+.player-video-description {
+    display: block;
+    height: calc(100% - 60px);
+    max-height: 100%;
+    padding: 10px;
+
+    overflow: hidden;
+
+    color: var(--text-color-secondary);
+}
+
+.player-video-description span {
+    height: 100%;
+    max-height: 114px;
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+@media only screen and (max-width: 600px) {
+    .player-section {
+        flex-direction: column;
+    }
+
+    .player-container {
+        border: none;
+    }
+
+    .player-footer {
+        height: fit-content;
+        width: 100%;
+    }
+
+    .player-mobile-hide {
+        display: none;
+    }
+}

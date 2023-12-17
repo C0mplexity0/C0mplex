@@ -1,0 +1,38 @@
+.pages-section {
+    width: calc(100% - 20px);
+    height: fit-content;
+
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.page-card {
+    width: 400px;
+    aspect-ratio: 16 / 6;
+
+    padding: 0px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    cursor: pointer;
+
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.page-card:hover {
+    box-shadow: 0px 0px 5px var(--default-box-shadow-color);
+    transform: scale(1.01);
+}
