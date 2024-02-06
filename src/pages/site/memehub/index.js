@@ -40,6 +40,8 @@ export default function MemeHub() {
             <MemeHubSearchArea />
 
             <Player />
+
+            <p>! MemeHub is currently down.</p>
         </Layout>
     )
 }
